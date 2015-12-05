@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'wisuda.list'|trans({}, 'AisWisudaBundle') }}</h1>
+
+    <ul id="wisuda-list">
+        {% for wisuda in wisudas %}
+            <li>
+                <a href="{{ path('api_1_get_wisuda', {'id': wisuda.id}) }}">{{ wisuda.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_wisudas', {'id': wisuda.id}) }}">{{ 'wisuda.edit.link'|trans({}, 'AisWisudaBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_wisudas', {'id': wisuda.id}) }}">{{ 'wisuda.remove.link'|trans({}, 'AisWisudaBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'wisuda.list.empty'|trans({}, 'AisWisudaBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_wisuda') }}">{{ 'wisuda.new.link'|trans({}, 'AisWisudaBundle') }}</a>
+    </p>
+{% endblock %}

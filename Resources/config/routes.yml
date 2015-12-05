@@ -1,0 +1,5 @@
+ais_wisuda_wisuda:
+    type: rest
+    prefix: /v1
+    resource: Ais\WisudaBundle\Controller\WisudaController
+    name_prefix:  api_1_ # naming collision

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="ais_wisuda.wisuda.handler.class">Ais\WisudaBundle\Handler\WisudaHandler</parameter>
+        <parameter key="ais_wisuda.wisuda.class">Ais\WisudaBundle\Entity\Wisuda</parameter>
+    </parameters>
+
+    <services>
+        <service id="ais_wisuda.wisuda.handler" class="%ais_wisuda.wisuda.handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%ais_wisuda.wisuda.class%</argument>
+            <argument type="service" id="form.factory"></argument>
+        </service>
+    </services>
+
+</container>

@@ -1,0 +1,11 @@
+# src/Ais/WisudaBundle/Resources/config/validation.yml
+Ais\WisudaBundle\Entity\Wisuda:
+    properties:
+        mahasiswa_id:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 100
+                minMessage: "Your title must be at least {{ limit }} characters length"
+                maxMessage: "Your title name cannot be longer than {{ limit }} characters length"
