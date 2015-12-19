@@ -16,6 +16,15 @@
             <argument>%ais_wisuda.wisuda.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        <service id="ais_wisuda.wisuda.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_wisuda.wisuda.class%</argument>
+		</service>
+        
+        <service id="ais_wisuda.wisuda.repository" 
+			class="Ais\WisudaBundle\Repository\WisudaRepository"
+			factory-service="ais_wisuda.wisuda.manager" factory-method="getRepository">
+				<argument>%ais_wisuda.wisuda.class%</argument>
+		</service>
     </services>
 
 </container>

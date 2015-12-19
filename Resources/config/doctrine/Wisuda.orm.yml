@@ -1,6 +1,7 @@
 Ais\WisudaBundle\Entity\Wisuda:
  type: entity
  table: wisuda
+ repositoryClass: Ais\WisudaBundle\Repository\WisudaRepository
  id:
   id: 
    type: integer

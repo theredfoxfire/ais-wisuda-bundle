@@ -345,4 +345,3 @@ class Wisuda implements WisudaInterface
         return $this->is_delete;
     }
 }
-
