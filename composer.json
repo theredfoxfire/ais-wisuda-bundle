@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/WisudaBundle",
+    "name" : "ais/wisudabundle",
     "description" : "A bundle filled with Wisuda",
     "type" : "symfony-bundle",
     "authors" : [{
